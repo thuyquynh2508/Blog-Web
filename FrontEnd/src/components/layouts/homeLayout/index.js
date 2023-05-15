@@ -3,10 +3,10 @@ import Header from "./components/Header"
 import Navigation from "./components/Navigation";
 
 
-const HomeLayout = ({children}) => {
+const HomeLayout = ({nav, pageId, children}) => {
     return(
         <div className="homeLayout">
-            <Navigation nav={allNav}/>
+            <Navigation pageId={pageId} nav={nav}/>
             <div className="homeLayout_content">
                 <Header/>
                 {children}
