@@ -13,9 +13,6 @@ const Header = () => {
                 
                 <div className="homeLayout_header_container_info">
                     
-                    {/* <IconButton>
-                        <NotificationsNone  className="homeLayout_header_container_info_notification"/>
-                    </IconButton> */}
                     <Tooltip>
   <IconButton >
     <Badge badgeContent="1" color="success" overlap="circular" style={{  transform: 'translate(30px, -20px)'}}>

@@ -1,10 +1,15 @@
 import { Divider } from "@mui/material";
 import { NavLink } from "react-router-dom"
+import logo from "../../../../assets/images/blog.png"
+import {BsBookmarkHeart} from "react-icons/bs"
 
 const Navigation = ({pageId, nav}) => {
     return (
         <div className="homeLayout_navigation">
-            <div className="homeLayout_navigation_logo">Music Player</div>
+            <img className="homeLayout_navigation_logo"
+            src = {logo}
+            />
+            {/* </div> */}
             <Divider sx={{borderColor: "#ffffff8a",
             }} />
             <div className="homeLayout_navigation_list">
