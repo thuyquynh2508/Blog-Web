@@ -1,0 +1,84 @@
+.blog {
+    margin-top: 32px;
+    padding: 0 32px;
+    &_cardList {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    &_card {
+        width: 18%;
+        height: 300px;
+        border-radius: 10px !important;
+        margin: 12px 1%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &_avatar {
+            width: 100%;
+            height: 150px;
+            border-top-right-radius: 15px;
+            border-top-left-radius: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &_info {
+            margin: 0px 15px 8px 15px;
+            &_name {
+                color: rgb(26, 115, 232);
+                padding: 10px 0px;
+                font-size: 18px;
+                margin: 0;
+                
+            }
+            &_createdate {
+                color: rgb(165, 164, 164);
+                font-size: 12px;
+                width: 100%;
+            }
+
+            &_description {
+                color: #000;
+                height: 45px;
+            }
+        }
+
+        &_user {
+            width: 100%;
+            display: flex;
+            
+            &_item {
+                width: 50%;
+                background-color: rgb(71, 115, 202);
+                &_text {
+                    font-size: 16px;
+                    text-align: center;
+                    color: white;
+                }
+            }
+
+            &_item_ {
+                width: 50%;
+                background-color: rgb(162, 162, 162);
+                &number {
+                    font-size: 16px;
+                    text-align: center;
+                    color: white;
+                }
+            }
+            
+            &_text {
+                font-size: 16px;
+                text-transform: capitalize;
+                text-align: center;
+                color: white;
+
+            }
+        }
+    }
+}

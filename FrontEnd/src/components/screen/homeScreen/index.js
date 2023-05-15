@@ -1,8 +1,9 @@
+
+import BlogCard from "./components/blogCard";
+
 const HomeScreen = () => {
     return (
-        <div>
-            Welcome
-        </div>
+        <BlogCard />
     )
 }
 
