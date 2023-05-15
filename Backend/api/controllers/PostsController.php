@@ -86,4 +86,42 @@ class PostsController {
         }
         mysqli_close($this->conn);
     }
+
+    public function getPostsFromDatabase() {
+        try {
+
+            header("Access-Control-Allow-Origin: *");
+            header("Access-Control-Allow-Headers: *");
+
+            $perPage = $_GET['limit'] ?? 5;
+            $pageNumber = $_GET['offset'] ?? 0;
+            $postsArray = [];
+
+            $sql = "SELECT * FROM Post";
+            $totalPosts = mysqli_num_rows(mysqli_query($this->conn, $sql));
+            $sql = "SELECT * FROM Post ORDER BY id LIMIT $perPage OFFSET $pageNumber";
+            $response = mysqli_query($this->conn, $sql);
+
+            if($response) {
+                while($row = mysqli_fetch_array($response)) {
+                    $postsArray['posts'][] = $row;
+                }
+            }
+            else {
+                echo "Error ". $sql. "<br/>" . mysqli_error($this->conn);
+            }
+
+            $postsArray['count'] = $totalPosts;
+
+            mysqli_close($this->conn);
+
+            echo json_decode($postsArray, JSON_PRETTY_PRINT);
+            return json_decode($postsArray, JSON_PRETTY_PRINT);
+            // var_dump($_GET);
+            // exit;
+        } catch (\Exception $e) {
+            var_dump($e->getMessage());
+            exit;
+        }
+    }
 }
