@@ -28,8 +28,15 @@ const Navigation = ({pageId, nav}) => {
                     })
                 }
             </div>
+
+            <div className="">
+                <button className="create-btn">
+                    +
+                </button>
+            </div>
         </div>
-    )
+    );
+
 }
 
 export default Navigation;

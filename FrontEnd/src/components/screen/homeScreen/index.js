@@ -1,9 +1,14 @@
 
 import BlogCard from "./components/blogCard";
+import CreateForm from "../../layouts/homeLayout/components/CreateForm";
 
 const HomeScreen = () => {
     return (
-        <BlogCard />
+        <div>
+            <CreateForm />
+            <BlogCard />
+        </div>
+        
     )
 }
 
